@@ -3,13 +3,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import logo from 'Assets/images/logo.svg';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Divider } from 'antd';
 // util
 import { useResponsive } from 'Components/hooks';
 import { AppRoutes } from 'Routes';
 import { COLLAPSED_SIDEBAR_WIDTH } from 'Constants';
 // style
 import style from './mainSidebar.module.scss';
+// util
+import { RouteMap } from 'Routes';
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -34,10 +36,16 @@ function MainSidebar(props) {
                isCollapsed ? style.logoWrapperCollapsed : style.logoWrapperExpanded
             }`}>
             <img src={logo} alt="logo" className={style.logoImage} />
-            {!isCollapsed && <h1 className={style.title}>React Starter</h1>}
+            {!isCollapsed && <h1 className={style.title}>Ayo Drop Ship</h1>}
          </div>
          <Menu theme="light" mode="inline" selectedKeys={[location.pathname]} className={style.Menu}>
             {AppRoutes.map((route, i) => displayRoute(route))}
+            <Menu.Item>
+               <Link to={RouteMap.ROOT}>
+                  {'export' && <Icon type={'export'} />}
+                  <span>{'Logout'}</span>
+               </Link>
+            </Menu.Item>
          </Menu>
       </Sider>
    );

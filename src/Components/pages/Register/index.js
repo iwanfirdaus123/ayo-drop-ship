@@ -8,14 +8,14 @@ import { RouteMap } from 'Routes';
 import { $envDisplay } from 'Config';
 import { StackedInputGroup } from '../../forms';
 import { LoadingPageWrapper } from '../../wrappers';
-import style from './login.module.scss';
+import style from './register.module.scss';
 import { Login } from 'Components/pages/index';
 import banner from 'Assets/images/login-banner.png';
 
 /**
  * Login Screen
  */
-const LoginScreen = ({ login, isAuthenticated, fetching }) => {
+const RegisterScreen = ({ login, isAuthenticated, fetching }) => {
    const [username, updateUsername] = useState('');
    const [password, updatePassword] = useState('');
 
@@ -34,14 +34,33 @@ const LoginScreen = ({ login, isAuthenticated, fetching }) => {
       <LoadingPageWrapper showLoading={fetching} message={'Authenticating...'}>
         <div className={'row'}>
          <div className={'col-md-6'}>
-            <img src={banner} alt="login-banner" style={{width: '37vw', height: '74vh'}} />
+            <img src={banner} alt="login-banner" style={{width: '37vw', height: '83vh'}} />
          </div>
          <div className={'col-md-6'}>
             <Card
                className={style.Card}
                headStyle={{ border: 'none', fontSize: 24 }}>
-               <center><h2>Sign In</h2></center>
+               <center><h2>Register</h2></center>
                <br/>
+               <div className={'row'}>
+                   <div className={'col-md-6'}>
+                      <Input
+                         value={username}
+                         onChange={e => updateUsername(e.target.value)}
+                         name={'username'}
+                         placeholder="Username"
+                      />
+                   </div>
+                   <div className={'col-md-6'}>
+                      <Input.Password
+                         value={password}
+                         onChange={e => updatePassword(e.target.value)}
+                         name={'password'}
+                         type={'password'}
+                         placeholder="Password"
+                      />
+                   </div>
+               </div>
                <StackedInputGroup label={' '}>
                   <Input
                      value={username}
@@ -52,23 +71,36 @@ const LoginScreen = ({ login, isAuthenticated, fetching }) => {
                </StackedInputGroup>
                <StackedInputGroup label={' '}>
                   <Input
-                     value={password}
-                     onChange={e => updatePassword(e.target.value)}
-                     name={'password'}
-                     type={'email'}
+                     value={username}
+                     onChange={e => updateUsername(e.target.value)}
+                     name={'username'}
                      placeholder="Email"
+                  />
+               </StackedInputGroup>
+               <StackedInputGroup label={' '}>
+                  <Input
+                     value={username}
+                     onChange={e => updateUsername(e.target.value)}
+                     name={'username'}
+                     placeholder="No Hape"
+                  />
+               </StackedInputGroup>
+               <StackedInputGroup label={' '}>
+                  <Input
+                     value={username}
+                     onChange={e => updateUsername(e.target.value)}
+                     name={'username'}
+                     placeholder="Alamat"
                   />
                </StackedInputGroup>
                <div className={style.buttonWrapper}>
                   <Button type="primary" disabled={disableSubmit} block onClick={handleLogin}>
-                     SIGN IN
+                     REGISTER
                   </Button>
                </div>
                <br/>
                <center>
-                 <Link to="#">Lupa Password</Link>
-                 <Divider>Or</Divider>
-                 <Link to="/register">Register</Link>
+                 <Link to="/">Sign In</Link>
                </center>
             </Card>
          </div>
@@ -87,9 +119,9 @@ const mapDispatchToProps = dispatch => {
    };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterScreen);
 
-LoginScreen.propTypes = {
+RegisterScreen.propTypes = {
    /** method to login a user */
    login: PropTypes.func,
    /** is user authenticated? */
