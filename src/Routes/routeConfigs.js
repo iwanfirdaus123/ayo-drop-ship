@@ -8,6 +8,7 @@ import { Login } from 'Components/pages';
 import { Register } from 'Components/pages';
 import { Profile } from 'Components/pages';
 import { Affiliate } from 'Components/pages';
+import { Komisi } from 'Components/pages';
 
 const { Title } = Typography;
 
@@ -51,7 +52,7 @@ const ROUTES = [
             key: 'APP_KOMISI',
             path: '/app/komisi',
             title: 'Komisi',
-            component: () => <Title>Komisi Page</Title>,
+            component: Komisi,
             icon: 'credit-card',
             exact: true
          },
