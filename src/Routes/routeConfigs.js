@@ -9,6 +9,7 @@ import { Register } from 'Components/pages';
 import { Profile } from 'Components/pages';
 import { Affiliate } from 'Components/pages';
 import { Komisi } from 'Components/pages';
+import { Training } from 'Components/pages';
 
 const { Title } = Typography;
 
@@ -60,7 +61,7 @@ const ROUTES = [
             key: 'APP_TRAINING',
             path: '/app/training',
             title: 'Training',
-            component: () => <Title>Training Page</Title>,
+            component: Training,
             icon: 'desktop',
             exact: true
          },
