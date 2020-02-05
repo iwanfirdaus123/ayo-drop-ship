@@ -1,10 +1,13 @@
 import React from 'react';
 import { Typography } from 'antd';
-import { Login } from 'Components/pages';
-import { Register } from 'Components/pages';
 import { RootAppComponentWithRoutes, RootRouteWithSubRoutes } from 'Components/routes';
 // store
 import { Actions } from 'Store';
+// the component
+import { Login } from 'Components/pages';
+import { Register } from 'Components/pages';
+import { Profile } from 'Components/pages';
+import { Affiliate } from 'Components/pages';
 
 const { Title } = Typography;
 
@@ -24,7 +27,7 @@ const ROUTES = [
             key: 'APP_INDEX',
             path: '/app',
             title: 'Dashboard',
-            component: () => <Title>Welcome to the App</Title>,
+            component: () => <Title>Welcome to Ayo Drop Ship App</Title>,
             icon: 'dashboard',
             exact: true
          },
@@ -32,7 +35,7 @@ const ROUTES = [
             key: 'APP_PROFILE',
             path: '/app/profile',
             title: 'Profile',
-            component: () => <Title>Profile Page</Title>,
+            component: Profile,
             icon: 'user',
             exact: true
          },
@@ -40,7 +43,7 @@ const ROUTES = [
             key: 'APP_AFFILIATE',
             path: '/app/affliate',
             title: 'Affiliasi',
-            component: () => <Title>Affiliasi Page</Title>,
+            component: Affiliate,
             icon: 'deployment-unit',
             exact: true
          },
