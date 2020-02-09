@@ -6,11 +6,15 @@ import _Profile from './Profile';
 import _Affiliate from './Affiliate';
 import _Komisi from './Komisi';
 import _Training from './Training';
+import _Ticket from './Ticket';
+import _Update from './Update';
 
 export const Login = _Login;
 export const Affiliate = _Affiliate;
 export const Komisi = _Komisi;
 export const Training = _Training;
+export const Ticket = _Ticket;
+export const Update = _Update;
 export const Register = _Register;
 export const Profile = _Profile;
 export const NotFound = _NotFound;

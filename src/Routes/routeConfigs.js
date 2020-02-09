@@ -10,6 +10,8 @@ import { Profile } from 'Components/pages';
 import { Affiliate } from 'Components/pages';
 import { Komisi } from 'Components/pages';
 import { Training } from 'Components/pages';
+import { Update } from 'Components/pages';
+import { Ticket } from 'Components/pages';
 
 const { Title } = Typography;
 
@@ -69,17 +71,57 @@ const ROUTES = [
             key: 'APP_UPDATE',
             path: '/app/update',
             title: 'Update',
-            component: () => <Title>Update Page</Title>,
+            component: RootRouteWithSubRoutes,
             icon: 'up-circle',
-            exact: true
+            routes: [
+              {
+                 key: 'APP_UPDATE_PAY',
+                 path: '/app/update/confirm-payment',
+                 title: 'Confirm Payment',
+                 component: Ticket
+              },
+              {
+                 key: 'APP_UPDATE_INDEX',
+                 path: '/app/update',
+                 title: 'Membership',
+                 component: Update,
+                 exact: true
+              },
+              {
+                 key: 'APP_UPDATE_TICKET',
+                 path: '/app/update/ticket',
+                 title: 'Ticket',
+                 component: Ticket
+              }
+            ]
          },
          {
             key: 'APP_SHOP',
             path: '/app/shop',
             title: 'Shop',
-            component: () => <Title>Shop Page</Title>,
+            component: RootRouteWithSubRoutes,
             icon: 'shopping-cart',
-            exact: true
+            routes: [
+              {
+                 key: 'APP_SHOP_INDEX',
+                 path: '/app/shop',
+                 title: 'Shop',
+                 component: Update,
+                 exact: true
+              },
+              {
+                key: 'APP_SHOP_DETAIL_PRODUCT',
+                path: '/app/shop/detail',
+                title: 'Detail Product',
+                component: Ticket
+              },
+              {
+                 key: 'APP_SHOP_CART',
+                 path: '/app/shop/cart',
+                 title: 'Cart',
+                 component: Ticket
+              }
+            ]
          }
       ]
    }

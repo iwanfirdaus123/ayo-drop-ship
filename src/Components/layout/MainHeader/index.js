@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Layout, Icon, Typography } from 'antd';
+import { Layout, Icon, Typography, Input, Divider } from 'antd';
 // util
 import { RouteMap } from 'Routes';
 import { useResponsive } from 'Components/hooks';
@@ -14,6 +14,7 @@ import style from './mainHeader.module.scss';
 
 const { Header } = Layout;
 const { Title } = Typography;
+const { Search } = Input;
 
 /**
  * Main header for the application
@@ -34,12 +35,17 @@ function MainHeader(props) {
                type={sidebarIsCollapsed ? 'menu-unfold' : 'menu-fold'}
                onClick={toggleCollapsed}
             />
-            <Title level={4}>{`${$envDisplay} Environment`}</Title>
          </div>
          <div>
             <Link to={RouteMap.ROOT} style={{ margin: '0px 10px' }} onClick={logout}>
                Logout
             </Link>
+            <Divider type="vertical" style={{ height: '20px' }} />
+            <Search
+              placeholder="Search"
+              onSearch={value => console.log(value)}
+              style={{ width: 200 }}
+            />
          </div>
       </Header>
    );

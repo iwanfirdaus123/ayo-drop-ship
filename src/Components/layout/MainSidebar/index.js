@@ -26,7 +26,7 @@ function MainSidebar(props) {
    return (
       <Sider
          className={style.Sider}
-         theme={'light'}
+         style={{backgroundColor: '#008879'}}
          trigger={null}
          collapsible
          collapsed={isCollapsed}
@@ -38,10 +38,10 @@ function MainSidebar(props) {
             <img src={logo} alt="logo" className={style.logoImage} />
             {!isCollapsed && <h1 className={style.title}>Ayo Drop Ship</h1>}
          </div>
-         <Menu theme="light" mode="inline" selectedKeys={[location.pathname]} className={style.Menu}>
+         <Menu style={{backgroundColor: '#008879'}} mode="inline" selectedKeys={[location.pathname]} className={style.Menu}>
             {AppRoutes.map((route, i) => displayRoute(route))}
             <Menu.Item>
-               <Link to={RouteMap.ROOT}>
+               <Link to={RouteMap.ROOT} style={{color: 'white'}}>
                   {'export' && <Icon type={'export'} />}
                   <span>{'Logout'}</span>
                </Link>
@@ -75,7 +75,7 @@ function displayRoute(route) {
             key={route.key}
             title={
                <span>
-                  {route.icon && <Icon type={route.icon} />}
+                  {route.icon && <Icon style={{color: 'white'}} type={route.icon} />}
                   <span>{route.title}</span>
                </span>
             }>
@@ -87,7 +87,7 @@ function displayRoute(route) {
    return (
       <Menu.Item key={route.path}>
          <Link to={route.path}>
-            {route.icon && <Icon type={route.icon} />}
+            {route.icon && <Icon style={{color: 'white'}} type={route.icon} />}
             <span>{route.title}</span>
          </Link>
       </Menu.Item>

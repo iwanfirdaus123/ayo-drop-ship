@@ -13,7 +13,7 @@ import { Login } from 'Components/pages/index';
 import banner from 'Assets/images/login-banner.png';
 
 /**
- * Login Screen
+ * Register Screen
  */
 const RegisterScreen = ({ login, isAuthenticated, fetching }) => {
    const [username, updateUsername] = useState('');
