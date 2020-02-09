@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.941bf783.chunk.css",
+    "main.js": "/static/js/main.3fafd70a.chunk.js",
+    "main.js.map": "/static/js/main.3fafd70a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8df966f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8df966f.js.map",
+    "static/css/2.3f8f414c.chunk.css": "/static/css/2.3f8f414c.chunk.css",
+    "static/js/2.3000da0a.chunk.js": "/static/js/2.3000da0a.chunk.js",
+    "static/js/2.3000da0a.chunk.js.map": "/static/js/2.3000da0a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d3291c2f8f864ea69dca7eeb36109464.js": "/precache-manifest.d3291c2f8f864ea69dca7eeb36109464.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.3f8f414c.chunk.css.map": "/static/css/2.3f8f414c.chunk.css.map",
+    "static/css/main.941bf783.chunk.css.map": "/static/css/main.941bf783.chunk.css.map",
+    "static/media/divi.png": "/static/media/divi.34d752b5.png",
+    "static/media/facebook.png": "/static/media/facebook.3520ceeb.png",
+    "static/media/logo.svg": "/static/media/logo.e033e3db.svg",
+    "static/media/mail-chimp.png": "/static/media/mail-chimp.01850828.png",
+    "static/media/optimize-press.png": "/static/media/optimize-press.55248adf.png",
+    "static/media/paypal.png": "/static/media/paypal.3104f900.png",
+    "static/media/twitter.png": "/static/media/twitter.400dc885.png",
+    "static/media/wordpress.png": "/static/media/wordpress.20be2fb8.png",
+    "static/media/zaiper.png": "/static/media/zaiper.1a309867.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8df966f.js",
+    "static/css/2.3f8f414c.chunk.css",
+    "static/js/2.3000da0a.chunk.js",
+    "static/css/main.941bf783.chunk.css",
+    "static/js/main.3fafd70a.chunk.js"
+  ]
+}

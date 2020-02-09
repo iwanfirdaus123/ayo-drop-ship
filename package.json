@@ -7,7 +7,7 @@
       "npm": ">=6.10.0"
    },
    "scripts": {
-      "build": "env CI='false' react-app-rewired build",
+      "build": "react-app-rewired build",
       "build:prod": "env-cmd -e common,production npm run build",
       "build:staging": "env-cmd -e common,staging npm run build",
       "check:circular": "madge --circular ./src",
